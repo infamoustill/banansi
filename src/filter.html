@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Banansi</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- build:style bundle -->
+    <!-- /build -->
+    <!-- build:script bundle -->
+    <!-- /build -->
+</head>
+<body class="body body_page_inner">
+<!--(bake views/_header.html icnBack="left" icnMenu="right" title="Фильтр")-->
+
+<div class="static">
+    <div class="filter">
+        <form id="filter-form" class="form" action="/">
+            <div class="form__row">
+                <div class="form-caption">Блюда</div>
+                <div class="form-control-select">
+                    <select name="dishes">
+                        <option value="">Все</option>
+                        <option value="1">Пицца</option>
+                        <option value="2">Салаты</option>
+                        <option value="3">Суши</option>
+                        <option value="4">Блинчики и пироги</option>
+                        <option value="5">Шашлыки</option>
+                    </select>
+                    <i class="icn icn_arrow-down"></i>
+                    <i class="icn icn_cross-1 form-control-clear"></i>
+                </div>
+            </div>
+
+            <div class="form__row">
+                <div class="form-caption">Кухни</div>
+                <div class="form-control-select">
+                    <select name="kitchen">
+                        <option value="">Все</option>
+                        <option value="1">Итальянская / Европейская</option>
+                        <option value="2">Японская / Китайская</option>
+                        <option value="3">Русская / Украинская</option>
+                        <option value="4">Кавказская / Узбекская</option>
+                        <option value="5">Американская / Мексиканская</option>
+                    </select>
+                    <i class="icn icn_arrow-down"></i>
+                    <i class="icn icn_cross-1 form-control-clear"></i>
+                </div>
+            </div>
+
+            <div class="form__row">
+                <div class="form-caption">Способ оплаты</div>
+                <div class="form-control-select">
+                    <select name="kitchen">
+                        <option value="1">Оплата банковской картой</option>
+                        <option value="2">Оплата наличными</option>
+                        <option value="3">Оплата баллами</option>
+                    </select>
+                    <i class="icn icn_arrow-down"></i>
+                    <i class="icn icn_cross-1 form-control-clear"></i>
+                </div>
+            </div>
+
+            <div class="form__row mtX3">
+                <div class="form-control-checkbox">
+                    <input name="input-1" id="input-1" type="checkbox" value="" /><i class="icn icn_check"></i>
+                </div>
+                <label for="input-1">Работает сейчас</label>
+            </div>
+
+            <div class="form__row">
+                <div class="form-control-checkbox">
+                    <input name="input-2" id="input-2" type="checkbox" value="" /><i class="icn icn_check"></i>
+                </div>
+                <label for="input-2">Акции</label>
+            </div>
+
+            <div class="form__row mtX3">
+                <div class="filter__btns">
+                    <span onclick="app.filter.clear()" class="btn btn_color_yellow filter__btn filter__btn_type_clear">ОЧИСТИТЬ</span>
+                    <button class="btn btn_color_yellow filter__btn filter__btn_type_apply">ПРИМЕНИТЬ ФИЛЬТР</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+</script>
+</body>
+</html>

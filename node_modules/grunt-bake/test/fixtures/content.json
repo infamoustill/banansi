@@ -1,0 +1,22 @@
+{
+	"en": {
+		"title": "Apple Pie",
+		"info": {
+			"author": "Mathias"
+		},
+		"bar": false,
+		"items": [
+			"foo",
+			"bar",
+			"baz",
+			"superman"
+		]
+	},
+
+	"de": {
+		"title": "Apfelstrudel",
+		"info": {
+			"author": "Mathias"
+		}
+	}
+}

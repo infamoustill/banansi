@@ -1,0 +1,128 @@
+<header class="header">
+    <!--(bake-start _if="icnLoupe")-->
+    <a href="#" class="header__action header__action_pos_{{icnLoupe}} icn icn_loupe"></a>
+    <!--(bake-end)-->
+
+    <!--(bake-start _if="icnBack")-->
+    <a href="./index.html" class="header__action header__action_pos_{{icnBack}} icn icn_arrow-back"></a>
+    <!--(bake-end)-->
+
+
+    <!--(bake-start _if="icnMenu")-->
+    <i onclick="app.menu.open();" class="header__action header__action_pos_{{icnMenu}} icn icn_menu"></i>
+    <!--(bake-end)-->
+
+    <!--(bake-start _if="icnFilter")-->
+    <a href="#" class="header__action header__action_pos_{{icnFilter}} icn icn_filter"></a>
+    <!--(bake-end)-->
+
+    <!--(bake-start _if="icnCart")-->
+    <a href="#" class="header__action header__action_pos_{{icnCart}} icn icn_cart"></a>
+    <!--(bake-end)-->
+
+    <!--(bake-start _if="icnCartWithCounter")-->
+    <a href="#" class="header__action header__action_pos_{{icnCartWithCounter}} icn icn_cart">
+        <sup class="header__cart-counter">{{cartCounter}}</sup>
+    </a>
+    <!--(bake-end)-->
+
+    <!--(bake-start _if="icnLoupe2")-->
+    <a href="#" class="header__action header__action_pos_{{icnLoupe2}} icn icn_loupe"></a>
+    <!--(bake-end)-->
+
+    <i class="header__logo"></i>
+    <span class="header__title">{{title}}</span>
+</header>
+
+<span onclick="app.popup.open('selectCity');" class="select-city">
+    <i class="select-city__icn icn icn_map-marker"></i>
+    <span id="current-city" class="select-city__title">Екатеринбург</span>
+</span>
+
+<div id="popup-menu" class="popup-menu">
+    <i onclick="app.menu.close();" class="icn icn_cross-2 popup-menu__close"></i>
+
+    <div class="popup-menu__inner">
+        <a href="./po-orders.html" class="popup-menu__links popup-menu__links_type_po"><i class="icn icn_person"></i><span>Личный кабинет</span></a>
+        <a href="./mainpage-dishes.html" class="popup-menu__links"><span>Блюда</span></a>
+        <a href="./mainpage-kitchen.html" class="popup-menu__links"><span>кухни</span></a>
+        <a href="./mainpage-products.html" class="popup-menu__links"><span>продукты</span></a>
+        <a href="./mainpage-promo.html" class="popup-menu__links"><span>горячие акции</span></a>
+        <a href="./po-orders.html" class="popup-menu__links"><span>мои заказы</span></a>
+        <a href="./po-contacts.html" class="popup-menu__links"><span>обратная связь</span></a>
+        <span onclick="app.popup.open('selectCity');" class="popup-menu__links popup-menu__links_type_city"><span>выбор города</span></span>
+    </div>
+</div>
+
+<div id="selectCity" class="popup-source">
+    <div class="popup">
+        <form onsubmit="event.preventDefault(); app.citySubmit(this);" class="form" action="/">
+            <div class="popup__title">Выбор города</div>
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-1" type="radio" value="1"/><i></i>
+                </div>
+                <label for="city-1">Екатеринбург</label>
+            </div>
+
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-2" type="radio" value="2"/><i></i>
+                </div>
+                <label for="city-2">Тюмень</label>
+            </div>
+
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-3" type="radio" value="3"/><i></i>
+                </div>
+                <label for="city-3">Сургут</label>
+            </div>
+
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-4" type="radio" value="4" checked="checked"/><i></i>
+                </div>
+                <label for="city-4">Нижневартовск</label>
+            </div>
+
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-5" type="radio" value="5"/><i></i>
+                </div>
+                <label for="city-5">Тобольск</label>
+            </div>
+
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-6" type="radio" value="6"/><i></i>
+                </div>
+                <label for="city-6">Ханты-Мансийск</label>
+            </div>
+
+            <div class="ta-r">
+                <span onclick="app.popup.close();" class="btn btn_color_yellow mtX2 mbX2 popup-select-city__close">закрыть</span>
+                <button class="btn btn_color_yellow mtX2 mbX2 popup-select-city__confirm">подтвердить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="share" class="popup-source">
+    <div class="popup">
+        <div class="share">
+            <div class="popup__title">Поделиться</div>
+
+            <div class="share__list">
+                <div class="share__item"><i class="icn icn_soc-gl"></i></div>
+                <div class="share__item"><i class="icn icn_soc-tw"></i></div>
+                <div class="share__item"><i class="icn icn_soc-mail"></i></div>
+                <div class="share__item"><i class="icn icn_soc-fb"></i></div>
+                <div class="share__item"><i class="icn icn_soc-vk"></i></div>
+                <div class="share__item"><i class="icn icn_soc-mk"></i></div>
+                <div class="share__item"><i class="icn icn_soc-lj"></i></div>
+                <div class="share__item"><i class="icn icn_soc-ok"></i></div>
+            </div>
+        </div>
+    </div>
+</div>

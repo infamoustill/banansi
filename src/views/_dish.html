@@ -1,0 +1,51 @@
+<div class="dish">
+    <!--(bake-start _if="showRemove")--><span onclick="app.cart.removeItem(this);" class="dish__remove"><i class="icn icn_cross-2"></i></span><!--(bake-end)-->
+
+    <a href="./catalog-details.html" class="dish__main">
+        <div class="dish__photo"><div class="dish__photo-pic" style="background-image: url({{img}});">{{title}}</div></div>
+
+        <div class="dish__info">
+            <div class="dish__title">{{title}}</div>
+            <div class="dish__consist">{{consist}}</div>
+            <div class="dish__cost">
+                <span class="dish__cost-val">{{price}}<!--(bake-start _if="!balls")--><span class="rubl">a</span><!--(bake-end)--><!--(bake-start _if="balls")--> баллов<!--(bake-end)--></span>
+                <span class="dish__cost-weight">({{weight}})</span>
+            </div>
+        </div>
+    </a>
+
+    <div class="dish__actions-wrap">
+        <!--(bake-start _if="!quickOrder")--><div class="dish__actions"><!--(bake-end)-->
+        <!--(bake-start _if="quickOrder")--><div class="dish__actions dish__actions_state_order"><!--(bake-end)-->
+            <!--(bake-start _if="!quickOrder")-->
+            <span onclick="$(this).parents('.dish__actions').setMod('state', 'order')" class="btn btn_color_yellow dish__btn-to-cart"><span>В КОРЗИНУ</span><i class="icn icn_cart"></i></span>
+
+            <div class="dish__order">
+                <div class="dish__order-counter"><span>5</span>&nbsp;шт</div>
+                <div class="dish__order-quantity">
+                    <span class="dish__order-quantity-btn dish__order-quantity-btn_type_minus">-</span>
+                    <span class="dish__order-quantity-btn dish__order-quantity-btn_type_plus">+</span>
+                </div>
+
+                <div class="dish__order-btn">
+                    <a href="./cart.html" class="btn btn_color_yellow">ок</a>
+                </div>
+            </div>
+            <!--(bake-end)-->
+
+            <!--(bake-start _if="quickOrder")-->
+            <div class="dish__order dish__order_state_opened">
+                <div class="dish__order-counter"><span>5</span>&nbsp;шт</div>
+                <div class="dish__order-quantity">
+                    <span class="dish__order-quantity-btn dish__order-quantity-btn_type_minus">-</span>
+                    <span class="dish__order-quantity-btn dish__order-quantity-btn_type_plus">+</span>
+                </div>
+
+                <div class="dish__order-btn">
+                    <span class="btn btn_color_yellow">ок</span>
+                </div>
+            </div>
+            <!--(bake-end)-->
+        </div>
+    </div>
+</div>

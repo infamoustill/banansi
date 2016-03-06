@@ -1,0 +1,127 @@
+@mixin font($font-name, $file-name, $font-weight: 400, $font-style: normal) {
+  @font-face {
+    font-family: '#{$font-name}';
+    src: url('../fonts/#{$file-name}.eot?1');
+    src: url('../fonts/#{$file-name}.eot?1&#iefix') format('embedded-opentype'),
+    url('../fonts/#{$file-name}.woff?1') format('woff'),
+    url('../fonts/#{$file-name}.ttf?1') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius:    $radius;
+  -ms-border-radius:     $radius;
+  -o-border-radius:      $radius;
+  border-radius:         $radius;
+}
+
+@mixin box-shadow($val) {
+  -moz-box-shadow:    $val;
+  -webkit-box-shadow: $val;
+  box-shadow:         $val;
+}
+@mixin linear-gradient($angle, $color1, $offset1, $color2 ,$offset2:100, $color3:null, $offset3:100, $color4:null, $offset4:100, $color5:null, $offset5:100){
+  $angle_webkit:'left top, left bottom';
+  $angle_svg:'%20x2%3d%220%25%22%20y2%3d%22100%25%22';
+  $gradient-type:0;
+  $color-stop1_css:'#'#{$color1}' '#{$offset1}'%';
+  $color-stop2_css:',#'#{$color2}' '#{$offset2}'%';
+  $color-stop3_css:'';
+  $color-stop4_css:'';
+  $color-stop5_css:'';
+  $color-stop1_svg:'%3cstop%20style%3d%22stop%2dcolor%3a%23'#{$color1}'%22%20offset%3d%22'#{$offset1}'%25%22%2f%3e';
+  $color-stop2_svg:'%3cstop%20style%3d%22stop%2dcolor%3a%23'#{$color2}'%22%20offset%3d%22'#{$offset2}'%25%22%2f%3e';
+  $color-stop3_svg:'';
+  $color-stop4_svg:'';
+  $color-stop5_svg:'';
+  $color-stop1_webkit:'color-stop('#{$offset1}'%, #'#{$color1}')';
+  $color-stop2_webkit:',color-stop('#{$offset2}'%, #'#{$color2}')';
+  $color-stop3_webkit:'';
+  $color-stop4_webkit:'';
+  $color-stop5_webkit:'';
+  $color-start-filter:'#'#{$color1}'';
+  $color-stop-filter:'#'#{$color2}'';
+  @if $angle == right{
+    $angle_webkit:'right top, left top';
+    $angle_svg:'%20x2%3d%22100%25%22';
+  }
+  @if $angle == bottom{
+    $angle_webkit:'left bottom, left top';
+    $angle_svg:'%20x2%3d%220%22%20y1%3d%22100%25%22';
+  }
+  @if $angle == left{
+    $angle_webkit:'left top, right top';
+    $angle_svg:'';
+    $gradient-type:1;
+  }
+  @if $color3 != null {
+    $color-stop3_css:',#'#{$color3}' '#{$offset3}'%';
+    $color-stop3_svg:'%3cstop%20style%3d%22stop%2dcolor%3a%23'#{$color3}'%22%20offset%3d%22'#{$offset3}'%25%22%2f%3e';
+    $color-stop3_webkit:',color-stop(#'#{$offset3}',#'#{$color3}')';
+    $color-stop-filter:'#'#{$color3}'';
+  }
+  @if $color4 != null {
+    $color-stop4_css:',#'#{$color4}' '#{$offset4}'%';
+    $color-stop4_svg:'%3cstop%20style%3d%22stop%2dcolor%3a%23'#{$color4}'%22%20offset%3d%22'#{$offset4}'%25%22%2f%3e';
+    $color-stop4_webkit:',color-stop(#'#{$offset4}',#'#{$color4}')';
+    $color-stop-filter:'#'#{$color4}'';
+  }
+  @if $color5 != null {
+    $color-stop5_css:',#'#{$color5}' '#{$offset5}'%';
+    $color-stop5_svg:'%3cstop%20style%3d%22stop%2dcolor%3a%23'#{$color5}'%22%20offset%3d%22'#{$offset5}'%25%22%2f%3e';
+    $color-stop5_webkit:',color-stop(#'#{$offset5}',#'#{$color5}')';
+    $color-stop-filter:'#'#{$color5}'';
+  }
+
+  background-image:url(data:image/svg+xml,%3c%3fxml%20version%3d%221%2e0%22%3f%3e%3csvg%20xmlns%3d%22http%3a%2f%2fwww%2ew3%2eorg%2f2000%2fsvg%22%20width%3d%22100%25%22%20height%3d%22100%25%22%3e%3cdefs%3e%3clinearGradient%20id%3d%22G%22#{$angle_svg}%3e#{$color-stop1_svg}#{$color-stop2_svg}#{$color-stop3_svg}#{$color-stop4_svg}#{$color-stop5_svg}%3c%2flinearGradient%3e%3c%2fdefs%3e%3crect%20width%3d%22100%25%22%20height%3d%22100%25%22%20fill%3d%22url%28%23G%29%22%2f%3e%3c%2fsvg%3e);
+  background-image: -webkit-gradient(linear,#{$angle_webkit},#{$color-stop1_webkit}#{$color-stop2_webkit}#{$color-stop3_webkit}#{$color-stop4_webkit}#{$color-stop5_webkit});
+  background-image: -webkit-linear-gradient(#{$angle},#{$color-stop1_css}#{$color-stop2_css}#{$color-stop3_css}#{$color-stop4_css}#{$color-stop5_css});
+  background-image: -moz-linear-gradient(#{$angle},#{$color-stop1_css}#{$color-stop2_css}#{$color-stop3_css}#{$color-stop4_css}#{$color-stop5_css});
+  background-image: -ms-linear-gradient(#{$angle},#{$color-stop1_css}#{$color-stop2_css}#{$color-stop3_css}#{$color-stop4_css}#{$color-stop5_css});
+  background-image: -o-linear-gradient(#{$angle},#{$color-stop1_css}#{$color-stop2_css}#{$color-stop3_css}#{$color-stop4_css}#{$color-stop5_css});
+  background-image: linear-gradient(#{$angle},#{$color-stop1_css}#{$color-stop2_css}#{$color-stop3_css}#{$color-stop4_css}#{$color-stop5_css});
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$color-start-filter}, endColorstr=#{$color-stop-filter},GradientType=#{$gradient-type});
+}
+@mixin gradient-r($color-default, $color1, $color2, $direction:center, $shape: ellipse cover) {
+  background: $color-default;
+  background-image:      -o-radial-gradient($direction, $shape, $color1, $color2);
+  background-image:    -moz-radial-gradient($direction, $shape, $color1, $color2);
+  background-image: -webkit-radial-gradient($direction, $shape, $color1, $color2);
+  background-image:     -ms-radial-gradient($direction, $shape, $color1, $color2);
+  background-image:         radial-gradient($direction, $shape, $color1, $color2);
+}
+@mixin transition ($value) {
+  -webkit-transition: $value;
+  -moz-transition:    $value;
+  -o-transition:      $value;
+  -ms-transition:     $value;
+  transition:         $value;
+}
+
+@mixin box-sizing ($value: border-box) {
+  -moz-box-sizing:    $value;
+  -ms-box-sizing:     $value;
+  -webkit-box-sizing: $value;
+  -khtml-box-sizing:  $value;
+  box-sizing:         $value;
+}
+@mixin unselect () {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+$font-arial: 'Arial', 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+$font-comic-sans: 'Comic Sans MS', 'Monaco CY', 'Nimbus Mono L',	cursive;
+$font-courier-new: 'Courier New', 'Charcoal CY', 'Nimbus Mono L', monospace;
+$font-georgia: 'Georgia', 'Charcoal CY', 'Century Schoolbook L', serif;
+$font-impact: 'Impact', 'Charcoal CY', 'Nimbus Roman No9 L', sans-serif;
+$font-times-new-roman: 'Times New Roman', 'Times CY', 'Nimbus Roman No9 L', serif;
+$font-trebuchet-ms: 'Trebuchet MS', 'Helvetica CY', 'DejaVu Sans', sans-serif;
+$font-verdana: 'Verdana', 'Geneva CY', 'DejaVu Sans', sans-serif;

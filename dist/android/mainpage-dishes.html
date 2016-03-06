@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Banansi</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="css/styles.css" />
+<script type="text/javascript" src="js/libs/jquery.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.bem.js"></script>
+<script type="text/javascript" src="js/libs/jquery.inputmask.min.js"></script>
+<script type="text/javascript" src="js/libs/swiper.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body class="body body_page_main">
+
+<header class="header">
+
+
+
+
+
+
+    <i onclick="app.menu.open();" class="header__action header__action_pos_right icn icn_menu"></i>
+
+
+
+
+
+
+
+
+    <a href="#" class="header__action header__action_pos_right icn icn_loupe"></a>
+
+    <i class="header__logo"></i>
+    <span class="header__title"></span>
+</header>
+
+<span onclick="app.popup.open('selectCity');" class="select-city">
+    <i class="select-city__icn icn icn_map-marker"></i>
+    <span id="current-city" class="select-city__title">Екатеринбург</span>
+</span>
+
+<div id="popup-menu" class="popup-menu">
+    <i onclick="app.menu.close();" class="icn icn_cross-2 popup-menu__close"></i>
+
+    <div class="popup-menu__inner">
+        <a href="./po-orders.html" class="popup-menu__links popup-menu__links_type_po"><i class="icn icn_person"></i><span>Личный кабинет</span></a>
+        <a href="./mainpage-dishes.html" class="popup-menu__links"><span>Блюда</span></a>
+        <a href="./mainpage-kitchen.html" class="popup-menu__links"><span>кухни</span></a>
+        <a href="./mainpage-products.html" class="popup-menu__links"><span>продукты</span></a>
+        <a href="./mainpage-promo.html" class="popup-menu__links"><span>горячие акции</span></a>
+        <a href="./po-orders.html" class="popup-menu__links"><span>мои заказы</span></a>
+        <a href="./po-contacts.html" class="popup-menu__links"><span>обратная связь</span></a>
+        <span onclick="app.popup.open('selectCity');" class="popup-menu__links popup-menu__links_type_city"><span>выбор города</span></span>
+    </div>
+</div>
+
+<div id="selectCity" class="popup-source">
+    <div class="popup">
+        <form onsubmit="event.preventDefault(); app.citySubmit(this);" class="form" action="/">
+            <div class="popup__title">Выбор города</div>
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-1" type="radio" value="1"/><i></i>
+                </div>
+                <label for="city-1">Екатеринбург</label>
+            </div>
+
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-2" type="radio" value="2"/><i></i>
+                </div>
+                <label for="city-2">Тюмень</label>
+            </div>
+
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-3" type="radio" value="3"/><i></i>
+                </div>
+                <label for="city-3">Сургут</label>
+            </div>
+
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-4" type="radio" value="4" checked="checked"/><i></i>
+                </div>
+                <label for="city-4">Нижневартовск</label>
+            </div>
+
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-5" type="radio" value="5"/><i></i>
+                </div>
+                <label for="city-5">Тобольск</label>
+            </div>
+
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-6" type="radio" value="6"/><i></i>
+                </div>
+                <label for="city-6">Ханты-Мансийск</label>
+            </div>
+
+            <div class="ta-r">
+                <span onclick="app.popup.close();" class="btn btn_color_yellow mtX2 mbX2 popup-select-city__close">закрыть</span>
+                <button class="btn btn_color_yellow mtX2 mbX2 popup-select-city__confirm">подтвердить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="share" class="popup-source">
+    <div class="popup">
+        <div class="share">
+            <div class="popup__title">Поделиться</div>
+
+            <div class="share__list">
+                <div class="share__item"><i class="icn icn_soc-gl"></i></div>
+                <div class="share__item"><i class="icn icn_soc-tw"></i></div>
+                <div class="share__item"><i class="icn icn_soc-mail"></i></div>
+                <div class="share__item"><i class="icn icn_soc-fb"></i></div>
+                <div class="share__item"><i class="icn icn_soc-vk"></i></div>
+                <div class="share__item"><i class="icn icn_soc-mk"></i></div>
+                <div class="share__item"><i class="icn icn_soc-lj"></i></div>
+                <div class="share__item"><i class="icn icn_soc-ok"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="nav">
+    <a href="./mainpage-dishes.html" class="nav__item nav__item_state_active">БЛЮДА</a>
+    <a href="./mainpage-kitchen.html" class="nav__item ">КУХНИ</a>
+    <a href="./mainpage-products.html" class="nav__item ">ПРОДУКТЫ</a>
+    <a href="./mainpage-promo.html" class="nav__item ">АКЦИИ</a>
+</nav>
+
+<div class="swiper-container h-slides">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide h-slides__item"><div>Огромный выбор предложений -<br />все доступные кухни вашего города<br />в одном месте</div></div>
+        <div class="swiper-slide h-slides__item"><div>Самые вкусные акции и скидки<br />на еду от ресторанов вашего города</div></div>
+        <div class="swiper-slide h-slides__item"><div>У нас вы получаете баллы, которые<br />можно обменять на еду или на поощри-<br />тельные призы</div></div>
+    </div>
+    <div class="swiper-pagination h-slides__pagination"></div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('.h-slides').swiper({
+            pagination: '.h-slides__pagination',
+            paginationClickable: true
+        });
+    });
+</script>
+
+
+<div class="categories">
+    <a href="./companies.html" class="categories__item">
+        <div class="categories__pic"><div class="categories__pic-inn"><img src="images/android/categories/dishes/all.png" alt="Все рестораны"/></div></div>
+        <div class="categories__text"><span>Все рестораны</span></div>
+    </a>
+    <a href="./companies.html" class="categories__item">
+        <div class="categories__pic"><div class="categories__pic-inn"><img src="images/android/categories/dishes/pizza.png" alt="Пицца"/></div></div>
+        <div class="categories__text"><span>Пицца</span></div>
+    </a>
+    <a href="./companies.html" class="categories__item">
+        <div class="categories__pic"><div class="categories__pic-inn"><img src="images/android/categories/dishes/salad.png" alt="Салаты"/></div></div>
+        <div class="categories__text"><span>Салаты</span></div>
+    </a>
+    <a href="./companies.html" class="categories__item">
+        <div class="categories__pic"><div class="categories__pic-inn"><img src="images/android/categories/dishes/sushi.png" alt="Суши"/></div></div>
+        <div class="categories__text"><span>Суши</span></div>
+    </a>
+    <a href="./companies.html" class="categories__item">
+        <div class="categories__pic"><div class="categories__pic-inn"><img src="images/android/categories/dishes/pies.png" alt="Блинчики и пироги"/></div></div>
+        <div class="categories__text"><span>Блинчики и пироги</span></div>
+    </a>
+    <a href="./companies.html" class="categories__item">
+        <div class="categories__pic"><div class="categories__pic-inn"><img src="images/android/categories/dishes/barbecue.png" alt="Шашлыки"/></div></div>
+        <div class="categories__text"><span>Шашлыки</span></div>
+    </a>
+</div>
+
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+@include font('icns', 'android/icns');
+
+.icn {
+	font-family: icns;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	shape-rendering:crispEdges
+}
+.icn_share:before {
+	content: "\e612";
+}
+.icn_favorite:before {
+	content: "\e610";
+}
+.icn_mail:before {
+	content: "\e611";
+}
+.icn_arrow-back:before {
+	content: "\e600";
+}
+.icn_arrow-forward:before {
+	content: "\e601";
+}
+.icn_car:before {
+	content: "\e602";
+}
+.icn_cart:before {
+	content: "\e603";
+}
+.icn_check:before {
+	content: "\e604";
+}
+.icn_cross:before {
+	content: "\e605";
+}
+.icn_dislike:before {
+	content: "\e606";
+}
+.icn_filter:before {
+	content: "\e607";
+}
+.icn_like:before {
+	content: "\e608";
+}
+.icn_loupe:before {
+	content: "\e609";
+}
+.icn_map-marker:before {
+	content: "\e60a";
+}
+.icn_menu:before {
+	content: "\e60b";
+}
+.icn_person:before {
+	content: "\e60c";
+}
+.icn_phone:before {
+	content: "\e60d";
+}
+.icn_trash:before {
+	content: "\e60e";
+}
+.icn_warning:before {
+	content: "\e60f";
+}

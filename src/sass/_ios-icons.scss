@@ -1,0 +1,86 @@
+@include font('icns', 'ios/icns');
+
+.icn {
+	font-family: icns;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	shape-rendering:crispEdges
+}
+.icn_soc-fb:before {
+	content: "\e600";
+}
+.icn_soc-gl:before {
+	content: "\e601";
+}
+.icn_soc-lj:before {
+	content: "\e602";
+}
+.icn_soc-mail:before {
+	content: "\e603";
+}
+.icn_soc-mk:before {
+	content: "\e604";
+}
+.icn_soc-ok:before {
+	content: "\e605";
+}
+.icn_soc-tw:before {
+	content: "\e606";
+}
+.icn_soc-vk:before {
+	content: "\e607";
+}
+.icn_warning:before {
+	content: "\e60f";
+}
+.icn_share:before {
+	content: "\e60e";
+}
+.icn_menu:before {
+	content: "\e60d";
+}
+.icn_map-marker:before {
+	content: "\e60c";
+}
+.icn_loupe:before {
+	content: "\e60b";
+}
+.icn_like:before {
+	content: "\e60a";
+}
+.icn_filter:before {
+	content: "\e609";
+}
+.icn_dislike:before {
+	content: "\e608";
+}
+.icn_cross-2:before {
+	content: "\e610";
+}
+.icn_cross-1:before {
+	content: "\e611";
+}
+.icn_check:before {
+	content: "\e612";
+}
+.icn_cart:before {
+	content: "\e613";
+}
+.icn_arrow-up:before {
+	content: "\e614";
+}
+.icn_arrow-forward:before {
+	content: "\e615";
+}
+.icn_arrow-down:before {
+	content: "\e616";
+}
+.icn_arrow-back:before {
+	content: "\e617";
+}

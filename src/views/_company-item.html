@@ -1,0 +1,44 @@
+<!--(bake-start _if="href")-->
+<a class="company" href="{{href}}">
+<!--(bake-end)-->
+<!--(bake-start _if="!href")-->
+<div class="company">
+<!--(bake-end)-->
+    <div class="company__main">
+        <div class="company__logo"><img src="{{logo}}" alt="{{name}}"/></div>
+
+        <div class="company__rating">
+            <span class="company__rating-val">{{rating}}</span>
+            <i class="company__rating-icn icn icn_like"></i>
+        </div>
+
+        <div class="company__desc">
+            <div class="company__name">{{name}}</div>
+            <div class="company__categ">{{categ}}</div>
+        </div>
+    </div>
+
+    <div class="company__data-list">
+        <div class="company__data-item">
+            <b>{{cost}} <span class="rubl">a</span></b>
+            <div>Мин. сумма<br />заказа</div>
+        </div>
+        <div class="company__data-item">
+            <b>{{deliveryCost}}</b>
+            <div>Стоимость<br />доставки</div>
+        </div>
+        <div class="company__data-item">
+            <b>{{deliveryTime}}</b>
+            <div>Среднее время<br />доставки</div>
+        </div>
+    </div>
+
+    <!--(bake-start _if="isClosed")-->
+        <div class="company__closed"><span>Извините, мы откроемся через 13 часов,<br />Вы можете сделать <b>предзаказ!</b></span></div>
+    <!--(bake-end)-->
+<!--(bake-start _if="!href")-->
+</div>
+<!--(bake-end)-->
+<!--(bake-start _if="href")-->
+</a>
+<!--(bake-end)-->

@@ -1,0 +1,16 @@
+<div class="swiper-container h-slides">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide h-slides__item"><div>Огромный выбор предложений -<br />все доступные кухни вашего города<br />в одном месте</div></div>
+        <div class="swiper-slide h-slides__item"><div>Самые вкусные акции и скидки<br />на еду от ресторанов вашего города</div></div>
+        <div class="swiper-slide h-slides__item"><div>У нас вы получаете баллы, которые<br />можно обменять на еду или на поощри-<br />тельные призы</div></div>
+    </div>
+    <div class="swiper-pagination h-slides__pagination"></div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('.h-slides').swiper({
+            pagination: '.h-slides__pagination',
+            paginationClickable: true
+        });
+    });
+</script>

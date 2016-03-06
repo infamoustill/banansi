@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Banansi - GUI</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="css/styles.css" />
+<script type="text/javascript" src="js/libs/jquery.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.bem.js"></script>
+<script type="text/javascript" src="js/libs/jquery.inputmask.min.js"></script>
+<script type="text/javascript" src="js/libs/swiper.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body class="body">
+<!--ИКОНКИ-->
+    <div style="padding: 10px; font-size: 32px;">
+        <i class="icn icn_arrow-back"></i>
+        <i class="icn icn_arrow-down"></i>
+        <i class="icn icn_arrow-forward"></i>
+        <i class="icn icn_arrow-up"></i>
+        <i class="icn icn_cart"></i>
+        <i class="icn icn_check"></i>
+        <i class="icn icn_cross-1"></i>
+        <i class="icn icn_cross-2"></i>
+        <i class="icn icn_dislike"></i>
+        <i class="icn icn_filter"></i>
+        <i class="icn icn_like"></i>
+        <i class="icn icn_loupe"></i>
+        <i class="icn icn_map-marker"></i>
+        <i class="icn icn_menu"></i>
+        <i class="icn icn_share"></i>
+        <i class="icn icn_warning"></i>
+    </div>
+<!--/ИКОНКИ-->
+<!--КОНТРОЛЫ-->
+<form action="">
+    <div style="padding: 20px;">
+        <div>
+            <div class="form-control-checkbox">
+                <input name="input-1" id="input-1" type="checkbox" value="" checked="checked" /><i class="icn icn_check"></i>
+            </div>
+            <label for="input-1">Активный чекбокс</label>
+        </div>
+
+        <div>
+            <div class="form-control-checkbox">
+                <input name="input-2" id="input-2" type="checkbox" value="" /><i class="icn icn_check"></i>
+            </div>
+            <label for="input-2">Не активный чекбокс</label>
+        </div>
+
+        <div>
+            <div class="form-control-checkbox">
+                <input name="input-3" id="input-3" type="checkbox" value="" disabled="disabled" /><i class="icn icn_check"></i>
+            </div>
+            <label for="input-3">Выключенный чекбокс</label>
+        </div>
+
+        <div>
+            <div class="form-control-checkbox">
+                <input name="input-4" id="input-4" type="checkbox" value="" disabled="disabled" checked="checked" /><i class="icn icn_check"></i>
+            </div>
+            <label for="input-4">Выключенный активный чекбокс</label>
+        </div>
+    </div>
+
+    <div style="padding: 20px;">
+        <div>
+            <div class="form-control-radio">
+                <input name="radio-1" id="radio-1" type="radio" value="" checked="checked" /><i></i>
+            </div>
+            <label for="radio-1">Активная радиокнопка</label>
+        </div>
+
+        <div>
+            <div class="form-control-radio">
+                <input name="radio-2" id="radio-2" type="radio" value="" /><i></i>
+            </div>
+            <label for="radio-2">Не активная радиокнопка</label>
+        </div>
+
+        <div>
+            <div class="form-control-radio">
+                <input name="radio-3" id="radio-3" type="radio" value="" disabled="disabled" /><i></i>
+            </div>
+            <label for="radio-3">Выключенная радиокнопка</label>
+        </div>
+
+        <div>
+            <div class="form-control-radio">
+                <input name="radio-4" id="radio-4" type="radio" value="" disabled="disabled" checked="checked" /><i></i>
+            </div>
+            <label for="radio-4">Выключенная не активная радиокнопка</label>
+        </div>
+    </div>
+
+    <div style="padding: 10px;">
+        <div class="form-control-input"><input placeholder="Placeholder" type="text" value="" /><i class="icn icn_cross-1 form-control-clear"></i></div>
+        <div class="form-control-input"><input placeholder="Placeholder" type="text" value="" disabled="disabled" /><i class="icn icn_cross-1 form-control-clear"></i></div>
+    </div>
+    <div style="padding: 10px;">
+        <div class="form-control-select">
+            <select name="select-city" id="select-city">
+                <option value="">Выберите город...</option>
+                <option value="1" selected="selected">Нижний Тагилkkkkkkkkkkkkkk</option>
+                <option value="2">Нижний Новгород</option>
+                <option value="3">Нижний Барнаул</option>
+                <option value="4">Нижний Коминтерн</option>
+                <option value="5">Нижний Сокол</option>
+                <option value="5">Москва</option>
+                <option value="5">Санкт-Петербург</option>
+            </select>
+            <i class="icn icn_arrow-down"></i>
+            <i class="icn icn_cross-1 form-control-clear"></i>
+        </div>
+
+        <div class="form-control-select">
+            <select name="select-city" id="select-city-2" disabled="disabled" >
+                <option value="">Выберите город...</option>
+                <option value="1">Нижний Тагил</option>
+                <option value="2">Нижний Новгород</option>
+                <option value="3">Нижний Барнаул</option>
+                <option value="4">Нижний Коминтерн</option>
+                <option value="5">Нижний Сокол</option>
+                <option value="5">Москва</option>
+                <option value="5">Санкт-Петербург</option>
+            </select>
+            <i class="icn icn_arrow-down"></i>
+            <i class="icn icn_cross-1 form-control-clear"></i>
+        </div>
+    </div>
+
+    <div style="padding: 10px;">
+        <div class="form-control-textarea">
+            <textarea name="textarea1" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="form-control-textarea">
+            <textarea name="textarea2" cols="30" rows="10" disabled="disabled"></textarea>
+        </div>
+    </div>
+</form>
+<!--/КОНТРОЛЫ-->
+
+<!--КНОПКИ-->
+<a href="#" class="btn btn_color_yellow">Кнопка</a>
+<button class="btn btn_color_green">Кнопка</button>
+<button class="btn btn_color_green btn_wide_false">Кнопка</button>
+<!--/КНОПКИ-->
+</body>
+</html>

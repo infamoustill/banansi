@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Banansi</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link type="text/css" rel="stylesheet" href="css/styles.css" />
+<script type="text/javascript" src="js/libs/jquery.min.js"></script>
+<script type="text/javascript" src="js/libs/jquery.bem.js"></script>
+<script type="text/javascript" src="js/libs/jquery.inputmask.min.js"></script>
+<script type="text/javascript" src="js/libs/swiper.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body class="body body_page_inner">
+<header class="header">
+
+
+
+    <a href="./index.html" class="header__action header__action_pos_left icn icn_arrow-back"></a>
+
+
+
+    <i onclick="app.menu.open();" class="header__action header__action_pos_right icn icn_menu"></i>
+
+
+
+
+
+
+    <a href="#" class="header__action header__action_pos_right icn icn_cart">
+        <sup class="header__cart-counter">2</sup>
+    </a>
+
+
+
+    <i class="header__logo"></i>
+    <span class="header__title">Салаты</span>
+</header>
+
+<span onclick="app.popup.open('selectCity');" class="select-city">
+    <i class="select-city__icn icn icn_map-marker"></i>
+    <span id="current-city" class="select-city__title">Екатеринбург</span>
+</span>
+
+<div id="popup-menu" class="popup-menu">
+    <i onclick="app.menu.close();" class="icn icn_cross-2 popup-menu__close"></i>
+
+    <div class="popup-menu__inner">
+        <a href="./po-orders.html" class="popup-menu__links popup-menu__links_type_po"><i class="icn icn_person"></i><span>Личный кабинет</span></a>
+        <a href="./mainpage-dishes.html" class="popup-menu__links"><span>Блюда</span></a>
+        <a href="./mainpage-kitchen.html" class="popup-menu__links"><span>кухни</span></a>
+        <a href="./mainpage-products.html" class="popup-menu__links"><span>продукты</span></a>
+        <a href="./mainpage-promo.html" class="popup-menu__links"><span>горячие акции</span></a>
+        <a href="./po-orders.html" class="popup-menu__links"><span>мои заказы</span></a>
+        <a href="./po-contacts.html" class="popup-menu__links"><span>обратная связь</span></a>
+        <span onclick="app.popup.open('selectCity');" class="popup-menu__links popup-menu__links_type_city"><span>выбор города</span></span>
+    </div>
+</div>
+
+<div id="selectCity" class="popup-source">
+    <div class="popup">
+        <form onsubmit="event.preventDefault(); app.citySubmit(this);" class="form" action="/">
+            <div class="popup__title">Выбор города</div>
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-1" type="radio" value="1"/><i></i>
+                </div>
+                <label for="city-1">Екатеринбург</label>
+            </div>
+
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-2" type="radio" value="2"/><i></i>
+                </div>
+                <label for="city-2">Тюмень</label>
+            </div>
+
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-3" type="radio" value="3"/><i></i>
+                </div>
+                <label for="city-3">Сургут</label>
+            </div>
+
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-4" type="radio" value="4" checked="checked"/><i></i>
+                </div>
+                <label for="city-4">Нижневартовск</label>
+            </div>
+
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-5" type="radio" value="5"/><i></i>
+                </div>
+                <label for="city-5">Тобольск</label>
+            </div>
+
+            <div class="form__row mt2 mb2">
+                <div class="form-control-radio">
+                    <input name="city" id="city-6" type="radio" value="6"/><i></i>
+                </div>
+                <label for="city-6">Ханты-Мансийск</label>
+            </div>
+
+            <div class="ta-r">
+                <span onclick="app.popup.close();" class="btn btn_color_yellow mtX2 mbX2 popup-select-city__close">закрыть</span>
+                <button class="btn btn_color_yellow mtX2 mbX2 popup-select-city__confirm">подтвердить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="share" class="popup-source">
+    <div class="popup">
+        <div class="share">
+            <div class="popup__title">Поделиться</div>
+
+            <div class="share__list">
+                <div class="share__item"><i class="icn icn_soc-gl"></i></div>
+                <div class="share__item"><i class="icn icn_soc-tw"></i></div>
+                <div class="share__item"><i class="icn icn_soc-mail"></i></div>
+                <div class="share__item"><i class="icn icn_soc-fb"></i></div>
+                <div class="share__item"><i class="icn icn_soc-vk"></i></div>
+                <div class="share__item"><i class="icn icn_soc-mk"></i></div>
+                <div class="share__item"><i class="icn icn_soc-lj"></i></div>
+                <div class="share__item"><i class="icn icn_soc-ok"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="dishes">
+    <div class="dish">
+
+    
+        <a href="./catalog-details.html" class="dish__main">
+            <div class="dish__photo"><div class="dish__photo-pic" style="background-image: url(images/common/dishes/thumb/1.jpg);">Салат китайский с курицей</div></div>
+    
+            <div class="dish__info">
+                <div class="dish__title">Салат китайский с курицей</div>
+                <div class="dish__consist">Курица, сыр, листья салата</div>
+                <div class="dish__cost">
+                    <span class="dish__cost-val">250<span class="rubl">a</span></span>
+                    <span class="dish__cost-weight">(150гр)</span>
+                </div>
+            </div>
+        </a>
+    
+        <div class="dish__actions-wrap">
+
+<div class="dish__actions dish__actions_state_order">
+
+    
+
+                <div class="dish__order dish__order_state_opened">
+                    <div class="dish__order-counter"><span>5</span>&nbsp;шт</div>
+                    <div class="dish__order-quantity">
+                        <span class="dish__order-quantity-btn dish__order-quantity-btn_type_minus">-</span>
+                        <span class="dish__order-quantity-btn dish__order-quantity-btn_type_plus">+</span>
+                    </div>
+    
+                    <div class="dish__order-btn">
+                        <span class="btn btn_color_yellow">ок</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dish">
+
+    
+        <a href="./catalog-details.html" class="dish__main">
+            <div class="dish__photo"><div class="dish__photo-pic" style="background-image: url(images/common/dishes/thumb/1.jpg);">Салат китайский с курицей</div></div>
+    
+            <div class="dish__info">
+                <div class="dish__title">Салат китайский с курицей</div>
+                <div class="dish__consist">Курица, сыр, листья салата</div>
+                <div class="dish__cost">
+                    <span class="dish__cost-val">250<span class="rubl">a</span></span>
+                    <span class="dish__cost-weight">(150гр)</span>
+                </div>
+            </div>
+        </a>
+    
+        <div class="dish__actions-wrap">
+
+<div class="dish__actions dish__actions_state_order">
+
+    
+
+                <div class="dish__order dish__order_state_opened">
+                    <div class="dish__order-counter"><span>5</span>&nbsp;шт</div>
+                    <div class="dish__order-quantity">
+                        <span class="dish__order-quantity-btn dish__order-quantity-btn_type_minus">-</span>
+                        <span class="dish__order-quantity-btn dish__order-quantity-btn_type_plus">+</span>
+                    </div>
+    
+                    <div class="dish__order-btn">
+                        <span class="btn btn_color_yellow">ок</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="static">
+    <div class="cart-data">
+        <div class="cart-data__row">
+            <div class="cart-data__label"><span>Стоимость заказа</span></div>
+            <div class="cart-data__val">
+                <div>500 <span class="rubl">a</span></div>
+                <div>900 баллов</div>
+            </div>
+        </div>
+        <div class="cart-data__row">
+            <div class="cart-data__label"><span>Заработано баллов</span></div>
+            <div class="cart-data__val"><div>50 баллов</div></div>
+        </div>
+        <div class="cart-data__row">
+            <div class="cart-data__label"><span>Стоимость доставки</span></div>
+            <div class="cart-data__val"><div>0 <span class="rubl">a</span></div></div>
+        </div>
+        <div class="cart-data__row">
+            <div class="cart-data__label"><span>Итого к оплате</span></div>
+            <div class="cart-data__val">
+                <div class="highlight">500 <span class="rubl">a</span></div>
+            </div>
+        </div>
+
+        <div class="cart-data__alert">
+            <i class="icn icn_warning cart-data__alert-icn"></i>
+            <div class="cart-data__alert-text">Внимание, минимальная сумма заказа - 600 <span class="rubl">a</span></div>
+        </div>
+
+        <div class="cart__order-btn-wrap">
+            <a href="#" class="cart-data__btn btn btn_color_yellow cart__order-btn">ВЕРНУТЬСЯ В МЕНЮ</a>
+        </div>
+    </div>
+</div>
+
+<script>
+</script>
+</body>
+</html>

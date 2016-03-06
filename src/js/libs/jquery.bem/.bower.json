@@ -1,0 +1,34 @@
+{
+  "name": "jquery.bem",
+  "homepage": "https://github.com/zenwalker/jquery-bem",
+  "authors": [
+    "Maxim Poletaev <zenwalker2@gmail.com>"
+  ],
+  "description": "Plugin for comfortable work with BEM DOM from jQuery",
+  "main": "jquery.bem.js",
+  "keywords": [
+    "bem",
+    "jquery"
+  ],
+  "dependencies": {
+    "jquery": ">=1.10.2"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "d82f02d8cc",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "d82f02d8cc0c65e49ecd845e3e859654b4f91607"
+  },
+  "_source": "git://github.com/zenwalker/jquery-bem.git",
+  "_target": "*",
+  "_originalSource": "jquery.bem",
+  "_direct": true
+}
